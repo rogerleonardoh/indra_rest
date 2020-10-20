@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "64a24620-0e64-4076-94fc-36fe7322cc69",
+		"name": "INDRA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register user",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "b26d4fdf-d43e-49cc-a9b5-48043cafee74",
+						"exec": [
+							"pm.variables.set('uri', 'http://indra.dev.rest/');"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":{\n        \"value\":\"rherrera\"\n    },\n    \"mail\":{\n        \"value\":\"rogerleonardoh@gmail.com\"\n    },\n    \"pass\":{\n        \"value\":\"123456\"\n    },\n    \"field_names\":{\n        \"value\":\"Roger Leonardo\"\n    },\n    \"field_surnames\":{\n        \"value\":\"Herrera Rojas\"\n    },\n    \"field_phone\":{\n        \"value\":\"3143837497\"\n    },\n    \"field_date\":{\n        \"value\":\"1983-12-12\"\n    }\n}"
+				},
+				"url": {
+					"raw": "{{uri}}api/indra/user?_format=json",
+					"host": [
+						"{{uri}}api"
+					],
+					"path": [
+						"indra",
+						"user"
+					],
+					"query": [
+						{
+							"key": "_format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get  users",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "21cc9714-24ea-4f78-8d1e-f8168182b98c",
+						"exec": [
+							"pm.variables.set('uri', 'http://indra.dev.rest/');"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{uri}}api/indra/users?_format=json",
+					"host": [
+						"{{uri}}api"
+					],
+					"path": [
+						"indra",
+						"users"
+					],
+					"query": [
+						{
+							"key": "_format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get  user",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "337b7851-a2ab-4e25-8a90-bed2f171265c",
+						"exec": [
+							"pm.variables.set('uri', 'http://indra.dev.rest/');"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{uri}}api/indra/users/11?_format=json",
+					"host": [
+						"{{uri}}api"
+					],
+					"path": [
+						"indra",
+						"users",
+						"11"
+					],
+					"query": [
+						{
+							"key": "_format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

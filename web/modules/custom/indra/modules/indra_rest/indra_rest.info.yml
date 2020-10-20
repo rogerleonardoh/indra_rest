@@ -1,0 +1,7 @@
+name: 'Indra rest'
+type: module
+description: 'Indra rest'
+core: 8.x
+package: 'INDRA'
+dependencies:
+  - indra
